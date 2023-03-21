@@ -233,7 +233,7 @@ main > .headline button:hover {
 }
 
 main > .cotacao {
-	padding: 0 5rem;
+	padding: 3rem;
 	width: 40rem;
 	height: 40rem;
 	background: var(--color-main);
@@ -242,15 +242,24 @@ main > .cotacao {
 	border-radius: .4rem;
 }
 
-main > .cotacao input{
+main > .cotacao .input{
 	width: 100%;
 	padding: .5rem 1.3rem;
 	margin: .5rem 0;
 	border: .1rem solid black;
+	outline: none;
 	border-radius: .4rem;
 
-	font-size: 1.5rem;
-	text-transform: uppercase;
+	font-size: 1.6rem;
+	
+	
+}
+
+main > .cotacao textarea{
+	height: auto;
+	resize: none;
+	
+	
 }
 
 

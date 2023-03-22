@@ -14,7 +14,8 @@
 /* Variáveis */
 
 :root {
-
+	
+	--color-bg: #171718;
 	--color-main: #c5a47e; 
 	--color-secondary: #d19f68;
 	--color-third: #856848;
@@ -33,8 +34,28 @@
 body {
 	font-size: 1.6rem;
 	color: var(--color-white);
-	background: black;
 }
+
+#home {
+	background: url(./imagens/barbearia.jpg) no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	position: relative;
+	z-index: 0;
+}
+
+#home > .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: .5;
+    background: #000;
+	z-index: -2;
+    }
 
 /* Header */
 
@@ -208,7 +229,7 @@ section {
 /* Headline */
 
 main > .headline {
-	width: 60rem;
+	width: 50rem;
 	height: 40rem;
 	text-transform: uppercase;
 }
@@ -224,7 +245,7 @@ main > .headline h3 {
 }
 
 main > .headline h1 {
-	font-size: 6rem;
+	font-size: 5rem;
 	font-weight: 600;
 	line-height: 7rem;
 }
@@ -243,7 +264,7 @@ main > .headline button:hover {
 
 main > .cotacao {
 	padding: 3rem;
-	width: 40rem;
+	width: 35rem;
 	
 	background: var(--color-secondary);
 	overflow: hidden;
@@ -302,6 +323,59 @@ main > .cotacao button:hover {
 }
 
 
+/* Section sobre/quem somos */
+
+section.sobre {
+	background: var(--color-main);
+	overflow: hidden;
+}
+
+section.sobre > .imagem{
+	position: relative;
+	width: 40rem;
+	height: 50rem;
+	overflow: hidden;
+	background: var(--color-main);
+	outline: 1px solid rgba(255,255,255, .9);
+	outline-offset: -2rem;
+	box-shadow: .5rem 3rem 1rem rgba(0, 0, 0, .1);
+
+}
+
+section.sobre > .imagem img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	inset: 0;
+	object-fit: cover;
+	opacity: .8;
+	transition: transform .7s;
+ }
+
+section.sobre > .imagem img:hover {
+	transform: scale(1.15);
+}
+
+section.sobre > .quem-somos {
+	width: fit-content;
+}
+
+
+section.sobre > .quem-somos h1{
+	margin-bottom: 1.5rem;
+	font-size: 5rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: .3rem;
+	color: rgba(0, 0, 0, 0.8);
+	border-bottom: 2px solid rgba(0, 0, 0, 0.8);
+	
+}
+
+section.sobre > .quem-somos p{
+	color: var(--color-gray);
+}
+
 
 @media(max-width: 780px){
 	header > button{
@@ -321,13 +395,10 @@ main > .cotacao button:hover {
 
 
 /*
-
 section {
 	backgroud: blue;
 	color: white;
 	height: 100vh;
 	padding: 3.5% 15%; 
 }
-
 */
-

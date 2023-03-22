@@ -11,12 +11,18 @@
 	scroll-behavior: smooth;
 }
 
+/* Variáveis */
+
 :root {
 
-	--color-main: #d19f68;
+	--color-main: #c5a47e; 
+	--color-secondary: #d19f68;
+	--color-third: #856848;
 	--color-white: #ffffff;
 	--color-header: rgb(47, 46, 44);
 	--color-btn-header: #a57a4c;
+	
+	--color-gray: #c5c5c5;
 
 	--transition-duration-slow: 300ms;
 	--transition-property-common: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
@@ -29,6 +35,8 @@ body {
 	color: var(--color-white);
 	background: black;
 }
+
+/* Header */
 
 header {
 	position: fixed;
@@ -96,7 +104,6 @@ header.sticky {
 }
 
 
-
 /* Ícone media query */
 
 
@@ -162,9 +169,8 @@ header.sticky {
 	
 }
 
-
 button{
-	background: var(--color-main);
+	background: var(--color-secondary);
 	padding: 1rem 3rem;
 	border-radius: .4rem;
 	border: none;
@@ -180,6 +186,7 @@ button:hover{
 	background: var(--color-btn-header);
 	cursor: pointer;
 	transition: all .8s ease;
+	
 }
 
 
@@ -195,14 +202,15 @@ section {
 	align-items: center;
 
 	overflow: hidden;
-	gap: 2rem;
+	gap: 3rem;
 }
+
+/* Headline */
 
 main > .headline {
 	width: 60rem;
 	height: 40rem;
 	text-transform: uppercase;
-	
 }
 
 main > .headline span {
@@ -229,39 +237,87 @@ main > .headline button {
 
 main > .headline button:hover {
 	background: var(--color-main);
-
 }
+
+/* Contato */
 
 main > .cotacao {
 	padding: 3rem;
 	width: 40rem;
-	height: 40rem;
-	background: var(--color-main);
+	
+	background: var(--color-secondary);
 	overflow: hidden;
 	text-align: center;
-	border-radius: .4rem;
+	border-radius: .3rem;
+}
+
+main > .cotacao h1 {
+	font-weight: 300;
+	text-transform: uppercase;
+	border-bottom: 1px solid var(--color-btn-header);
+	margin-bottom: 2rem;
 }
 
 main > .cotacao .input{
 	width: 100%;
 	padding: .5rem 1.3rem;
 	margin: .5rem 0;
-	border: .1rem solid black;
+	border: .1rem solid var(--color-third);
 	outline: none;
-	border-radius: .4rem;
-
-	font-size: 1.6rem;
-	
-	
+	border-radius: .3rem;
+	font-size: 1.6rem;	
 }
 
 main > .cotacao textarea{
-	height: auto;
+	height: 100%;
 	resize: none;
-	
-	
+
 }
 
+main > .cotacao input::placeholder, 
+main > .cotacao textarea::placeholder
+{
+	color: var(--color-gray);
+	font-weight: 300;
+	letter-spacing: .1rem;
+}
+
+main > .cotacao input:focus, 
+main > .cotacao textarea:focus
+{
+	outline: none;
+	transition: all 0.6s ease;
+	transform: translateY(-.3rem);
+}
+
+main > .cotacao button {
+	background: var(--color-third);
+	color: var(--color-white);
+	width: 100%;
+}
+
+main > .cotacao button:hover {
+	background: var(--color-btn-header);
+	transform: translateY(.3rem);
+}
+
+
+
+@media(max-width: 780px){
+	header > button{
+		display: none;
+	}
+	main > .headline h1 {
+		font-size: 4rem;
+	}
+}
+
+@media(max-width: 400px){
+	main > .headline h1 {
+		font-size: 2rem;
+		line-height: 1.1;
+	}
+}
 
 
 /*

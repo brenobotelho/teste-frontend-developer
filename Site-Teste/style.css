@@ -22,6 +22,7 @@
 	--color-white: #ffffff;
 	--color-header: rgb(47, 46, 44);
 	--color-btn-header: #a57a4c;
+	--color-section-h1: rgba(0, 0, 0, 0.8);;
 	
 	--color-gray: #c5c5c5;
 
@@ -33,6 +34,7 @@
 
 body {
 	font-size: 1.6rem;
+	background: var(--color-bg);
 	color: var(--color-white);
 }
 
@@ -45,15 +47,17 @@ body {
 	z-index: 0;
 }
 
-#home > .overlay {
+/* Div para aplicação de filtro */
+
+#home > .filter {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     content: '';
-    opacity: .5;
-    background: #000;
+    opacity: .7;
+    background: black;
 	z-index: -2;
     }
 
@@ -190,11 +194,14 @@ header.sticky {
 	
 }
 
+/* Botões padronizados */
+
 button{
 	background: var(--color-secondary);
 	padding: 1rem 3rem;
 	border-radius: .4rem;
 	border: none;
+	outline: none;
 
 	color: var(--bg-white);
 	font-weight: 400;
@@ -224,6 +231,13 @@ section {
 
 	overflow: hidden;
 	gap: 3rem;
+}
+
+section h1{
+	font-size: 5rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: .3rem;
 }
 
 /* Headline */
@@ -323,7 +337,7 @@ main > .cotacao button:hover {
 }
 
 
-/* Section sobre/quem somos */
+/* Section | Sobre/quem somos */
 
 section.sobre {
 	background: var(--color-main);
@@ -332,7 +346,7 @@ section.sobre {
 
 section.sobre > .imagem{
 	position: relative;
-	width: 40rem;
+	width: 40%;
 	height: 50rem;
 	overflow: hidden;
 	background: var(--color-main);
@@ -357,24 +371,50 @@ section.sobre > .imagem img:hover {
 }
 
 section.sobre > .quem-somos {
-	width: fit-content;
+	width: 40%;
 }
 
-
 section.sobre > .quem-somos h1{
-	margin-bottom: 1.5rem;
-	font-size: 5rem;
-	font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: .3rem;
-	color: rgba(0, 0, 0, 0.8);
-	border-bottom: 2px solid rgba(0, 0, 0, 0.8);
-	
+	margin-bottom: 6.5rem;
+	color: var(--color-section-h1);
+	border-bottom: 2px solid var(--color-section-h1);
 }
 
 section.sobre > .quem-somos p{
-	color: var(--color-gray);
+	font-size: 1.8rem;
+	font-weight: 300;
+	line-height: 2.8rem;
 }
+
+/* Section | Serviços */
+
+section#servicos {
+	display: block;
+	text-align: center;
+}
+
+section#servicos > .lista-servicos {
+	display: flex;
+	border: 1px solid blue;
+	
+	width: 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+section#servicos > .lista-servicos .boxes {
+	width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 @media(max-width: 780px){

@@ -16,7 +16,6 @@
 	<!--Link CSS-->
 	<link rel="stylesheet" href="style.css">
 	
-	
 
 	<title> Teste | Ellos Design </title>
 </head>
@@ -24,7 +23,7 @@
 <body>
 	<!-- Menu -->
 	
-	<main id="home" class"inicio">
+	<main class="content fadeInDown" id"inicio">
 
 		<div class="filter"> </div>
 
@@ -36,9 +35,11 @@
 			<ul class="navbar">
 				<li> <a href="#" class="active">Home</a></li>
 				<li> <a href="#sobre">Quem somos</a></li>
-				<li> <a href="#">Serviços</a></li>
-				<li> <a href="#">Contatos</a></li>
+				<li> <a href="#servicos">Serviços</a></li>
+				<li> <a href="#footer">Contatos</a></li>
 			</ul>
+
+			
 
 			<button class="btn"> [11] 9 9999-9999 </button>
 
@@ -55,7 +56,7 @@
 			</div>
 
 			<div class="cotacao"> 
-				<h1> Entre em contato </h1> 
+				<h1> Fale conosco </h1> 
 				
 				<form> 
 					<input type="text" class="input" placeholder="Nome:" />
@@ -68,7 +69,7 @@
 		
 	</main>
 
-		<section class="sobre" id="sobre">
+		<section class="sobre fadeInDown" id="sobre">
 			<div class="imagem"> <img src="./imagens/barbearia3.jpg" alt="Imagem de uma barbearia"/> </div>
 
 			<div class="quem-somos"> 
@@ -77,19 +78,129 @@
 			</div>
 		</section>
 
-		<section class="servicos" id="servicos">
+		<section class="servicos fadeInDown" id="servicos">
 			<h1>Serviços</h1>
 
 			<div class="lista-servicos">
-				<div class="boxes">1</div>
-				<div class="boxes">2</div>
-				<div class="boxes">3</div>
-				<div class="boxes">4</div>
-				<div class="boxes">4</div>
-				<div class="boxes">4</div>
+				<div class="boxes">
+					<div class="content-img"> 
+						<img src="./imagens/maquina.png" />
+					</div>
+
+					<div class="content-text">
+						<h1> Cortes de cabelo </h1>
+						<p> Consultoria, corte, secagem e estilo com produtos premium. Inclui um barbear de pescoço com espuma quente de cortesia com navalha.</p>
+					</div>
+				</div>
+
+				<div class="boxes">
+					<div class="content-img"> 
+						<img src="./imagens/barba.png" />
+					</div>
+
+					<div class="content-text">
+						<h1> Barba </h1>
+						<p> Consulta, corte, lâmina de barbear e combinação de toalha quente e fria. Termine com pós-barba, loção e sua escolha de óleo ou bálsamo para barba.</p>
+					</div>
+				</div>
+
+				<div class="boxes">
+					<div class="content-img"> 
+						<img src="./imagens/lavatorio.png" />
+					</div>
+
+					<div class="content-text">
+						<h1> Lavagem de cabelo </h1>
+						<p> Consulta, análise, creme de cabelo e combinação de lavagem com água quente. Lavamos com a sua escolha de creme ou condicionador e terminamos com secagem e hidratação.</p>
+					</div>
+				</div>
+
+				<div class="boxes">
+					<div class="content-img"> 
+						<img src="./imagens/penteados.png" />
+					</div>
+
+					<div class="content-text">
+						<h1> Penteados </h1>
+						<p> Penteados especiais. Lavamos com a sua escolha de creme ou condicionador e secamos e hidratamos e finalizamos com seu penteado exclusivo.</p>
+					</div>
+				</div>
+
+				<div class="boxes">
+					<div class="content-img"> 
+						<img src="./imagens/limpeza.png" />
+					</div>
+
+					<div class="content-text">
+						<h1> Limpeza de pele </h1>
+						<p> Consulta, limpeza e secagem da face. Creme hidratante facial e massagem.</p>
+					</div>
+				</div>
+
+				<div class="boxes">
+					<div class="content-img"> 
+						<img src="./imagens/produtos.png" />
+					</div>
+
+					<div class="content-text">
+						<h1> Produtos </h1>
+						<p> Temos a venda de produtos também. Adquira seu pós-barba, sua pomada modeladora ou seu creme hidratante facial. </p>
+					</div>
+				</div>
+
 			</div>
+					
 		</section>
 
+		<section class="perguntas fadeInDown" id="perguntas">
+			<h1> Perguntas frequentes </h1>
+			<div class="box-perg"> Qual o tipo de penteado eu devo escolher para o meu cabelo? </div>
+			<div class="box-perg"> Qual a média de preços de cortes? </div>
+			<div class="box-perg"> Posso fazer limpeza de pele na Ellos Barber ou devo primeiramente procurar um dermatologista? </div>
+			<div class="box-perg"> A Ellos Barber possui programa de fidelidade? </div>
+			<div class="box-perg"> Eu consigo agendar horário pelo Whatsapp? </div>
+		</section>
+
+		<section class="content" id="footer">
+			<div class="filter"> </div> 
+			
+			<div class="content-left"> 
+				<h1> <a href=""> Ellos Barber </a> </h1>
+				<p> Agende um horário conosco e venha conhecer nosso trabalho</p>
+
+				<ul class="navbar">
+					<li> <a href="#">Home</a></li>
+					<li> <a href="#sobre">Quem somos</a></li>
+					<li> <a href="#">Serviços</a></li>
+					<li> <a href="#">Contatos</a></li>
+				</ul>
+
+				<button> Agende seu horário </button>
+			</div>
+
+			<div class="content-right"> 
+				<h3> Nossa equipe está pronta para atende-los e tornar essa experiência com este corte incrível!</h3>
+				<button> Agende seu horário </button>
+				<h5> Caso prefira, adicione a gente no whatsapp e mande-nos uma mensagem!</h5>
+			</div>
+			
+		</section>
+			
+			<footer> 
+				<div class="footer-desc"> 
+					<h1>Ellos Barber </h1>
+				</div>
+
+				<div class="footer-desc"> 
+					<h1> <img src="./imagens/tesoura.png" /> </h1>
+					<p> Ellos Barber &copy; | Todos os direitos reservados | 2023 | <br> Feito com &#10084; por <a href="https://github.com/brenobotelho"> Breno Botelho </a></p>
+				</div>
+
+				<div class="footer-desc"> 
+					<h1> 11 9 9999-9999 </h1>
+					<p> ellos@barber.com </p>
+				</div>
+			</footer>
 
 	
 	<script src="script.js"> </script>

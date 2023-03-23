@@ -11,10 +11,24 @@
 	scroll-behavior: smooth;
 }
 
+/* Estilo do scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-main); 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-third); 
+}
+
 /* Variáveis */
 
 :root {
-	
 	--color-bg: #171718;
 	--color-main: #c5a47e; 
 	--color-secondary: #d19f68;
@@ -38,7 +52,7 @@ body {
 	color: var(--color-white);
 }
 
-#home {
+.content {
 	background: url(./imagens/barbearia.jpg) no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -49,7 +63,7 @@ body {
 
 /* Div para aplicação de filtro */
 
-#home > .filter {
+.content > .filter {
     position: absolute;
     top: 0;
     left: 0;
@@ -70,12 +84,11 @@ header {
 	top: 0;
 	right: 0;
 	z-index: 1000;
-
+	background: var(--color-header);
+	
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-
-	background: var(--color-header);
 	padding: .7rem 12%;
 	transition: all .50s ease;
 }
@@ -109,7 +122,7 @@ header.sticky {
 	display: flex;
 }
 
-/* Navbar */
+/* Navegação */
 
 .navbar a {
 	color: var(--color-white);
@@ -194,7 +207,7 @@ header.sticky {
 	
 }
 
-/* Botões padronizados */
+/* Botões e links padronizados */
 
 button{
 	background: var(--color-secondary);
@@ -213,17 +226,24 @@ button{
 button:hover{
 	background: var(--color-btn-header);
 	cursor: pointer;
-	transition: all .8s ease;
-	
+	transition: all .8s ease;	
 }
 
+a {
+	color: var(--color-white);
+}
 
+a:hover {
+	color: var(--color-main);
+}
+
+/* Tags main, section e footes padronizadas */
 
 main,
-section {
+section,
+footer {
 	height: 100vh;
 	padding: 10rem 15%; 
-	border: 3px solid red;
 
 	display: flex;
 	justify-content: space-between;
@@ -231,6 +251,8 @@ section {
 
 	overflow: hidden;
 	gap: 3rem;
+
+	
 }
 
 section h1{
@@ -240,7 +262,7 @@ section h1{
 	letter-spacing: .3rem;
 }
 
-/* Headline */
+/* Section home | Headline */
 
 main > .headline {
 	width: 50rem;
@@ -270,11 +292,13 @@ main > .headline button {
 	border: .2rem solid var(--color-main);
 }
 
-main > .headline button:hover {
+main > .headline button:hover,
+section#servicos > button:hover 
+{
 	background: var(--color-main);
 }
 
-/* Contato */
+/* Section home | Contato */
 
 main > .cotacao {
 	padding: 3rem;
@@ -306,7 +330,6 @@ main > .cotacao .input{
 main > .cotacao textarea{
 	height: 100%;
 	resize: none;
-
 }
 
 main > .cotacao input::placeholder, 
@@ -339,12 +362,12 @@ main > .cotacao button:hover {
 
 /* Section | Sobre/quem somos */
 
-section.sobre {
+section#sobre {
 	background: var(--color-main);
 	overflow: hidden;
 }
 
-section.sobre > .imagem{
+section#sobre > .imagem{
 	position: relative;
 	width: 40%;
 	height: 50rem;
@@ -356,7 +379,7 @@ section.sobre > .imagem{
 
 }
 
-section.sobre > .imagem img{
+section#sobre > .imagem img{
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -366,21 +389,22 @@ section.sobre > .imagem img{
 	transition: transform .7s;
  }
 
-section.sobre > .imagem img:hover {
+section#sobre > .imagem img:hover {
 	transform: scale(1.15);
 }
 
-section.sobre > .quem-somos {
+section#sobre > .quem-somos {
 	width: 40%;
 }
 
-section.sobre > .quem-somos h1{
+section#sobre > .quem-somos h1,
+section#perguntas > h1{
 	margin-bottom: 6.5rem;
 	color: var(--color-section-h1);
 	border-bottom: 2px solid var(--color-section-h1);
 }
 
-section.sobre > .quem-somos p{
+section#sobre > .quem-somos p{
 	font-size: 1.8rem;
 	font-weight: 300;
 	line-height: 2.8rem;
@@ -394,28 +418,136 @@ section#servicos {
 }
 
 section#servicos > .lista-servicos {
-	display: flex;
-	border: 1px solid blue;
-	
+	display: grid;
+	margin-top: 5rem;
 	width: 100%;
-	flex-direction: row;
-	flex-wrap: wrap;
+
+  	gap: 5rem;
+	grid-template-columns: 1fr 1fr;
 }
 
 section#servicos > .lista-servicos .boxes {
-	width: 50%;
+	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+}
+
+section#servicos > .lista-servicos .boxes .content-img {
+	padding: 1rem;
+	border: 1px solid var(--color-secondary);
+	transition: all .8s ease-out;
+}
+
+section#servicos > .lista-servicos .boxes .content-img:hover {
+	border: 1px solid var(--color-secondary);
+	transform:scale(1.1);
+	background: var(--color-third);
+}
+
+section#servicos > .lista-servicos .boxes .content-text h1{
+	font-size: 2.5rem;
+	color: var(--color-main);
+}
+
+section#servicos > .lista-servicos .boxes .content-text p,
+section#footer > .content-left p{
+	margin: 1rem;
+	font-size: 1.6rem;
+	font-weight: 300;	
+}
+
+/* Section | pergutnas frequentes */
+
+section#perguntas {
+	background: var(--color-main);
+	flex-direction: column;
+	justify-content: center;
+}
+
+section#perguntas > .box-perg {
+	padding: 2rem 4rem;
+	
+	width: 80%;
+	height: 8rem;
+
+	border: .2rem solid black;
+	border-radius: .4rem;
+	box-shadow: 0 0.7em 1em -1em rgb(73, 73, 73);
+
+	font-size: 1.8rem;
+	font-weight: 500;
+	color: var(--color-section-h1);
+	cursor: pointer;
+}
+
+section#perguntas > .box-perg:hover{
+	background: var(--color-third);
+	transition: all 0.5s ease;
+	transform: translateY(.6rem);
 }
 
 
+/* Section | Footer */
+
+section#footer {
+	height: 50vh;
+}
+
+section#footer > .content-left {
+	width: 40%;
+	border-radius: .6rem;
+	background: #c5a47e7a;
+	text-align: center;
+}
+
+section#footer > .content-left ul,  
+section#footer > .content-right h3,
+section#footer > .content-right h5{
+	margin: 3rem 0;
+	font-weight: 400;
+}
+
+section#footer > .content-left button {
+	width: 100%;
+}
+
+section#footer > .content-right {
+	width: 40%;
+	background: var(--color-third);
+	border-radius: .6rem;	
+	padding: 1rem 5rem;
+	
+	font-size: 1.8rem;
+	text-align: center;.
+}
+
+section#footer > .content-left:hover,
+section#footer > .content-right:hover{
+	transition: all 0.6s ease;
+	transform: translateY(-.8rem);
+}
+
+/* Footer | rodapé da página */
+
+footer {
+	height: 40vh;
+	text-align: center;
+	align-items: flex-start;
+}
+
+footer h1{
+	color: var(--color-main);
+	margin-bottom: 3rem;
+	text-transform: uppercase;
+}
+
+footer a {
+	text-decoration: underline;
+	color: var(--color-main); 
+}
 
 
-
-
-
-
-
-
-
+/* Media querys - responsividade */
 
 @media(max-width: 780px){
 	header > button{
@@ -433,12 +565,58 @@ section#servicos > .lista-servicos .boxes {
 	}
 }
 
+/* Animação */
 
-/*
-section {
-	backgroud: blue;
-	color: white;
-	height: 100vh;
-	padding: 3.5% 15%; 
+.fadeInDown {
+	-webkit-animation-name: fadeInDown;
+	animation-name: fadeInDown;
+	-webkit-animation-duration: 3s;
+	animation-duration: 3s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
 }
-*/
+@-webkit-keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+
+/* Animação Fade-in*/
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+.fadeIn {
+	opacity:0;
+	-webkit-animation:fadeIn ease-in 1;
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+	-webkit-animation-fill-mode:forwards;
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+	-webkit-animation-duration:2s;
+	-moz-animation-duration:2s;
+	animation-duration:2s;
+}
+

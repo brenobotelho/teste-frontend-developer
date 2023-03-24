@@ -300,7 +300,7 @@ section#servicos > button:hover
 
 /* Section home | Contato */
 
-main > .cotacao {
+main > .contato {
 	padding: 3rem;
 	width: 35rem;
 	
@@ -310,14 +310,14 @@ main > .cotacao {
 	border-radius: .3rem;
 }
 
-main > .cotacao h1 {
+main > .contato h1 {
 	font-weight: 300;
 	text-transform: uppercase;
 	border-bottom: 1px solid var(--color-btn-header);
 	margin-bottom: 2rem;
 }
 
-main > .cotacao .input{
+main > .contato .input{
 	width: 100%;
 	padding: .5rem 1.3rem;
 	margin: .5rem 0;
@@ -327,34 +327,34 @@ main > .cotacao .input{
 	font-size: 1.6rem;	
 }
 
-main > .cotacao textarea{
+main > ..contato textarea{
 	height: 100%;
 	resize: none;
 }
 
-main > .cotacao input::placeholder, 
-main > .cotacao textarea::placeholder
+main > .contato input::placeholder, 
+main > .contato textarea::placeholder
 {
 	color: var(--color-gray);
 	font-weight: 300;
 	letter-spacing: .1rem;
 }
 
-main > .cotacao input:focus, 
-main > .cotacao textarea:focus
+main > .contato input:focus, 
+main > .contato textarea:focus
 {
 	outline: none;
 	transition: all 0.6s ease;
 	transform: translateY(-.3rem);
 }
 
-main > .cotacao button {
+main > .contato button {
 	background: var(--color-third);
 	color: var(--color-white);
 	width: 100%;
 }
 
-main > .cotacao button:hover {
+main > .contato button:hover {
 	background: var(--color-btn-header);
 	transform: translateY(.3rem);
 }
@@ -569,7 +569,7 @@ footer a {
 		display: block;
 		padding: 10rem 10%;
 	}
-	main > .cotacao, 
+	main > .contato, 
 	main > .headline, 
 	section#sobre .quem-somos
 	{

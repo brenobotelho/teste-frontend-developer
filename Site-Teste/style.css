@@ -518,7 +518,7 @@ section#footer > .content-right {
 	padding: 1rem 5rem;
 	
 	font-size: 1.8rem;
-	text-align: center;.
+	text-align: center;
 }
 
 section#footer > .content-left:hover,
@@ -549,20 +549,70 @@ footer a {
 
 /* Media querys - responsividade */
 
-@media(max-width: 780px){
-	header > button{
-		display: none;
+@media (max-width: 1000px){
+	main, 
+	section, 
+	footer,
+	section#footer > .content-right,
+	section#perguntas > .box-perg {
+		width: auto;
+		height: auto;
 	}
 	main > .headline h1 {
-		font-size: 4rem;
+		font-size: 3rem;
+		line-height: 4rem;
 	}
 }
 
-@media(max-width: 400px){
+@media(max-width: 500px){
+	main {
+		display: block;
+		padding: 10rem 10%;
+	}
+	main > .cotacao, 
+	main > .headline, 
+	section#sobre .quem-somos
+	{
+		width: 100%;
+	}	
+
 	main > .headline h1 {
-		font-size: 2rem;
+		font-size: 3rem;
 		line-height: 1.1;
 	}
+
+	main > header button {
+		display: none;
+	}
+
+	section#sobre .imagem{
+		display: none;
+	}
+
+	section#servicos > .lista-servicos,
+	section#servicos > .lista-servicos,
+	section#perguntas > .box-perg
+	{
+		display: block;
+		width: auto;
+    		height: auto;
+	}
+
+	section#footer, 
+	section#footer > .content-right,
+	section#footer h1{
+		font-size: inherit;
+		width: auto;
+    		height: auto;
+	}
+
+	section#footer > .content-right {
+		padding: 1rem 2rem;
+	}
+	
+	
+
+	
 }
 
 /* Animação */
@@ -619,4 +669,13 @@ footer a {
 	-moz-animation-duration:2s;
 	animation-duration:2s;
 }
+
+
+/* Powered by Breno Botelho
+
+Github: https://github.com/brenobotelho
+Linkedin: https://br.linkedin.com/in/breno-botelho
+Instagram: @brenobotelho_
+
+*/
 

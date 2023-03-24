@@ -5,30 +5,32 @@
     <br> Este é o resultado do meu Teste Front-End da <a href="https://www.ellosdesign.com.br/"> Ellos Design.</a>
 </p>
 
-![..](./print-site/print2.png)
+![..](./ellosdesign.png)
 
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- HTML
-- CSS
+- HTML5
+- CSS3
 - Animações CSS
 - Javascript
 - Github
-- Figma
 
 ## 💻 Projeto
 
-Este site tem como objetivo acessar a uma plataforma por via de sua página de login. <br>
+Este site tem como objetivo mostrar ao cliente e agendar um horário na barbearia Ellos Barber. <br>
 
-Projeto construído a partir do layout proposto no desafio [#BoraCodar11](https://www.figma.com/community/file/1217810469465160264) realizado pela [Rocketseat](https://rocketseat.com.br). <br>
+Projeto construído a partir da documentação proposta pela [Ellos Design](https://github.com/brenobotelho/teste-frontend-developer). <br>
 
-📌 Utilizei o HTML para marcação do site, CSS para estilização e para animações na página do login, o Figma como base da criação do projeto front-end e o Javascript para algumas funções do usuário.
+📌 Utilizei o HTML para marcação do site, CSS para estilização e para animações desta landing page, a documentação como base da criação do projeto front-end e o Javascript para algumas funções do site.
+
+Adaptei o site para responsivel, com facilidade em acesso por um mobile por via de Media Query, utilizei animações hover e scroll do CSS, efeito de fixação do header, transições ao entrar na página, etc. Hospedei o site no Git Pages para acesso de todos. [Entre e confira agora mesmo](https://brenobotelho.github.io/teste-frontend-developer/Site-Teste/).
+
 
 ## 📑 Deploy
 
-Acesse o site [clicando aqui](https://brenobotelho.github.io/boracodar/desafio11/).
+Acesse o site Ellos Barber [clicando aqui](https://brenobotelho.github.io/teste-frontend-developer/Site-Teste/).
 
 # 👤 Autor
 
